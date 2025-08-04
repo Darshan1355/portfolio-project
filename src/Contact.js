@@ -21,7 +21,7 @@ const Contact = () => {
     setResponseMsg("");
 
     try {
-      await axios.post("http://localhost:5000/send", formData);
+      await axios.post("https://portfolio-project-5fd6.onrender.com/send", formData);
       setResponseMsg("✅ Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
