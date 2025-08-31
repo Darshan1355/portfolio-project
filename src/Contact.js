@@ -35,8 +35,8 @@ const Contact = () => {
   return (
 <PageWrapper>
   <div className="min-h-screen flex items-center justify-center px-4 py-10">
-    <section className="w-full max-w-xl bg-white p-6 shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-4 text-center">Contact Me</h2>
+    <section className="w-full max-w-xl bg-[#1a1a1a] p-6 shadow-lg rounded-lg border border-yellow-300">
+      <h2 className="text-2xl font-bold mb-4 text-center text-white">Contact Me</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -45,7 +45,7 @@ const Contact = () => {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border-2 border-yellow-400 rounded"
         />
         <input
           type="email"
@@ -54,7 +54,7 @@ const Contact = () => {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border-2 border-yellow-400 rounded"
         />
         <textarea
           name="message"
@@ -63,12 +63,12 @@ const Contact = () => {
           required
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border-2 border-yellow-400 rounded"
         />
         <button
           type="submit"
           disabled={loading}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
+          className="bg-transparent text-yellow-400 px-4 py-2 rounded border-2 border-orange-400 w-full hover:bg-yellow-400 hover:border-orange-500 hover:text-white"
         >
           {loading ? "Sending..." : "Send Message"}
         </button>

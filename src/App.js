@@ -1,45 +1,44 @@
-
 import './App.css';
-import { BrowserRouter as Router,Route,Switch,} from 'react-router-dom';
+import Navbar from './Navbar';
 import Home from './Home';
 import Skill from './Skill';
 import Achievement from './Achievement';
 import Contact from './Contact';
 import Usefetch from './Usefetch';
-import Navbar from './Navbar';
-
+import Footer from './Footer';
 
 function App() {
   return (
-   <Router>
-  {/* Fullscreen container that prevents overflow */}
-  <div className="w-screen h-screen overflow-x-hidden relative">
-
-    {/* Background Image fixed behind everything */}
-    <div
-      className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat -z-10"
-      style={{ backgroundImage: "url('/space.jpg')" }}
-    ></div>
-
-    {/* Scrollable content area */}
-    <div className="absolute inset-0 overflow-y-auto">
+    <div className="w-full min-h-screen overflow-x-hidden bg-black">
+      {/* Fixed Navbar */}
       <Navbar />
+
+      {/* Fetch Component (if needed globally) */}
       <Usefetch />
-      
-      <div className="pt-12">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/Skill" component={Skill} />
-          <Route path="/Achievement" component={Achievement} />
-          <Route path="/Contact" component={Contact} />
-        </Switch>
+
+      {/* Scrollable Sections */}
+      <div className="pt-16 scroll-smooth">
+        <section id="home" className="min-h-screen flex items-center justify-center">
+          <Home />
+        </section>
+
+        <section id="skill" className="min-h-screen flex items-center justify-center">
+          <Skill />
+        </section>
+
+        <section id="achievement" className="min-h-screen flex items-center justify-center">
+          <Achievement />
+        </section>
+
+        <section id="contact" className="min-h-screen flex items-center justify-center">
+          <Contact />
+        </section>
       </div>
+
+      <Footer />
     </div>
-
-  </div>
-</Router>
-
   );
 }
+
 
 export default App;

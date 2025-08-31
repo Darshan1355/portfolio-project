@@ -6,7 +6,21 @@ const Achievement = () => {
 
   return (
     <PageWrapper>
-      <div className="mt-8 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-3 justify-items-center">
+      {/* Title */}
+      <div className="mt-8 mb-6 text-center">
+        <p
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white"
+          style={{
+            textShadow:
+              "0 0 8px #c82909, 0 0 12px #c82909, 0 0 16px #c82909",
+          }}
+        >
+          Achievement
+        </p>
+      </div>
+
+      {/* Grid of Cards */}
+      <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 px-3 justify-items-center">
         {/* Card 1 */}
         <div className="card">
           <img
@@ -96,30 +110,34 @@ const Achievement = () => {
             onClick={() => setFullscreenImage("/cpp.jpeg")}
           />
           <div className="m-4 text-center">
-            <span className="font-bold text-white">CPP Training by Spoken tutorial</span>
+            <span className="font-bold text-white">
+              CPP Training by Spoken tutorial
+            </span>
           </div>
           <div className="badge">
             <span>Certificate</span>
           </div>
         </div>
-
-        {/* Fullscreen Image Viewer */}
-        {fullscreenImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-            <button
-              onClick={() => setFullscreenImage(null)}
-              className="absolute top-5 right-5 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition"
-            >
-              ✕
-            </button>
-            <img
-              src={fullscreenImage}
-              alt="Fullscreen"
-              className="max-w-full max-h-full rounded-lg shadow-2xl"
-            />
-          </div>
-        )}
       </div>
+
+      {/* Fullscreen Image Viewer */}
+      {fullscreenImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+          <button
+            onClick={() => setFullscreenImage(null)}
+            className="absolute top-5 right-5 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition"
+          >
+            ✕
+          </button>
+          <img
+            src={fullscreenImage}
+            alt="Fullscreen"
+            className="max-w-full max-h-full rounded-lg shadow-2xl"
+          />
+          
+        </div>
+      )}
+      <div className="h-10 col-span-full"></div>
     </PageWrapper>
   );
 };
