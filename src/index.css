@@ -2,14 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-.card{
-    @apply bg-[#1a1a1a]  overflow-hidden  max-w-sm relative transform transition-transform duration-300 hover:scale-105 border border-gray-800 shadow-[0_0_18px_#facc15];
+@layer utilities {
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30px);
+    }
+  }
+
+  .animate-slide-once {
+    animation: slide 0.6s ease-out forwards;
+  }
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-slide {
+    animation: fadeSlideUp 0.7s ease-out forwards;
+  }
+
+   @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-slide-in {
+    animation: fadeSlideIn 0.8s ease-out forwards;
+  }
+
+   @keyframes typingLoop {
+    0% {
+      width: 0;
+    }
+    40% {
+      width: 100%;
+    }
+    60% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-typing-loop {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 0;
+    animation: typingLoop 6s steps(20, end) infinite;
+    /* 6s = typing + hold + backspace + 2s pause */
+  }
+
+   @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .animate-wave {
+    display: inline-block;
+    transform-origin: 70% 70%; /* pivot like real hand */
+    animation: wave 2s infinite;
+  }
 }
-.badge{
-    @apply bg-black text-yellow-400  text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2 outline outline-1 outline-yellow-400;
+
+
+.card {
+  @apply bg-[#1a1a1a] overflow-hidden max-w-sm relative transform transition-transform duration-300 hover:scale-105 border border-gray-800 shadow-[0_0_18px_#facc15];
 }
+
+.badge {
+  @apply bg-black text-yellow-400 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2 outline outline-1 outline-yellow-400;
+}
+
 .badge-base {
   @apply bg-black text-yellow-400 text-xs uppercase font-bold rounded-full px-3 py-1 outline outline-1 outline-yellow-400;
 }
-
-

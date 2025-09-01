@@ -2,10 +2,10 @@ import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
 import Skill from './Skill';
-import Achievement from './Achievement';
 import Contact from './Contact';
 import Usefetch from './Usefetch';
 import Footer from './Footer';
+import About from './About';
 
 function App() {
   return (
@@ -22,12 +22,12 @@ function App() {
           <Home />
         </section>
 
-        <section id="skill" className="min-h-screen flex items-center justify-center">
-          <Skill />
+        <section id="about" className="min-h-screen flex items-center justify-center">
+          <About />
         </section>
 
-        <section id="achievement" className="min-h-screen flex items-center justify-center">
-          <Achievement />
+        <section id="skill" className="min-h-screen flex items-center justify-center">
+          <Skill />
         </section>
 
         <section id="contact" className="min-h-screen flex items-center justify-center">
