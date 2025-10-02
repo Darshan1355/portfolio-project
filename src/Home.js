@@ -34,7 +34,7 @@ const Home = () => {
           ref={cardRef}
           className="max-w-5xl w-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl 
                      shadow-[0_0_25px_rgba(255,255,255,0.15)] p-6 sm:p-6 
-                     flex flex-col lg:flex-row items-center gap-10 opacity-0"
+                     flex flex-col lg:flex-row items-center gap-5 opacity-0"
         >
           {/* Text Section */}
           <div className="flex-1 flex flex-col items-start text-left space-y-4">

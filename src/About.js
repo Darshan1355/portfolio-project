@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     <PageWrapper>
-      <div className="min-h-screen flex items-center justify-center px-4 py-5">
+      <div className="min-h-screen flex items-center justify-center px-4 py-3">
         <section
           ref={cardRef}
           className="max-w-4xl w-full bg-gray-900 rounded-2xl shadow-[0_0_20px_#808080] p-8 opacity-0"

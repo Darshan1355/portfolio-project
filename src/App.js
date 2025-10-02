@@ -17,7 +17,7 @@ function App() {
       <Usefetch />
 
       {/* Scrollable Sections */}
-      <div className="pt-16 scroll-smooth">
+      <div className="pt-4 scroll-smooth">
         <section id="home" className="min-h-screen flex items-center justify-center">
           <Home />
         </section>

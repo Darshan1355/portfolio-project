@@ -58,7 +58,7 @@ const Contact = () => {
 
   return (
     <PageWrapper>
-      <div className="min-h-screen flex items-center justify-center px-4 py-10">
+      <div className="min-h-screen flex items-center justify-center px-4 py-5">
         <section
           ref={sectionRef}
           className="w-full max-w-xl bg-[#1a1a1a] p-6 shadow-lg rounded-lg border border-yellow-300 opacity-0"
