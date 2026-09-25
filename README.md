@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a Next.js portfolio using the App Router. The application root is the repository root; `src/` contains legacy files that are not part of the active Next.js app.
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -18,7 +18,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to load Geist and has no required environment variables for the Next.js app. The optional variables in `.env.example` apply only to the standalone `email-server/` service.
+
+## Production build
+
+Use the standard Next.js commands from the repository root:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+## Vercel
+
+Import the repository as a Next.js project with the root directory set to `.`. Leave the Build Command and Output Directory at their automatic defaults, or set the Build Command to `npm run build` (equivalent to `next build`). Do not set the Build Command to `vercel build`, and do not set an output directory such as `build` or `out`. No `vercel.json` is required.
 
 ## Learn More
 
