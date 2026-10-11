@@ -252,17 +252,17 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: "project-1",
-      title: "Library Management System ",
-      shortDescription: "Library Management System using Spring boot and real-time analytics for efficient resource management.",
-      problem: "The existing library management processes were inefficient, leading to delays in book tracking and user management.",
-      solution: "Developed a full-stack library management system with Spring Boot backend, React frontend, and real-time analytics for efficient resource tracking.",
+      title: "CareerMind - AI Based Resume Analysis and Job Recommendation System",
+      shortDescription: "AI-powered platform for analyzing resumes and providing personalized job recommendations.",
+      problem: "Job seekers faced difficulty in finding relevant job opportunities, and employers struggled to identify suitable candidates.",
+      solution: "Developed a full-stack application with AI capabilities for resume analysis and job matching.",
       keyFeatures: [
-        "User-friendly interface for book cataloging and user management.",
-        "Real-time analytics dashboard for tracking book availability and user activity.",
-        "Secure authentication and role-based access control for library staff and users."
+        "Intelligent resume parsing and skill extraction.",
+        "Personalized job recommendations based on user profiles.",
+        "User-friendly interface for seamless interaction."
       ],
-      technologies: ["Java", "Spring Boot", "React", "MySQL", "Tailwind CSS"],
-      githubUrl: "https://github.com/[YOUR_USERNAME]/[PROJECT_REPO]",
+      technologies: ["Java", "Spring Boot", "React", "MySQL", "Docker", "FastAPI", "ML models"],
+      githubUrl: "https://github.com/Darshan1355/Resume_Intelligence",
       liveUrl: "https://[YOUR_DEMO_URL].vercel.app",
       imageUrl: "/projects/project1.png",
       featured: true,
@@ -270,7 +270,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "project-2",
-      title: "AI Based Data Analyzer",
+      title: "AI Based Candidate Selection for HR - Resume Intelligence",
       shortDescription: "An AI-powered search engine for efficient document analysis and retrieval.",
       problem: "Users struggled to search through lengthy technical documentation quickly.",
       solution: "Engineered a vector-search application with LangChain and Python backend.",
@@ -280,8 +280,8 @@ export const portfolioData: PortfolioData = {
         "Minimalist fast-loading search interface."
       ],
       technologies: ["Python", "LangChain", "Groq API", "Streamlit", "Vector Databases"],
-      githubUrl: "https://github.com/Darshan1355/AI-Based-Data-Analyzer",
-      liveUrl: "https://[YOUR_DEMO_URL].vercel.app",
+      githubUrl: "https://github.com/Darshan1355/Resume_Intelligence",
+      liveUrl: "https://gen-ai-based-candidate-selector-for-hr-mcih2peqzpaw7e7gyxhu7t.streamlit.app/",
       imageUrl: "/projects/project2.png",
       featured: true,
       category: "AI & NLP"
